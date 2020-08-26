@@ -1,4 +1,4 @@
-package com.vitorgsevero.io.votingsessionapi.model;
+package com.vitorgsevero.io.votingsessionapi.auditing;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.CreatedDate;

@@ -1,6 +1,6 @@
 package com.vitorgsevero.io.votingsessionapi.model;
 
-import com.vitorgsevero.io.votingsessionapi.auditing.ScheduleAudit;
+import com.vitorgsevero.io.votingsessionapi.auditing.AssociateAudit;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -12,12 +12,10 @@ import javax.persistence.Id;
 @Data
 @AllArgsConstructor
 @Entity
-public class Schedule extends ScheduleAudit {
+public class Associate extends AssociateAudit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-
-    private String name;
 
 }

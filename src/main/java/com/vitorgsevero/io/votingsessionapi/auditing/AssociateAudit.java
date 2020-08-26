@@ -1,4 +1,4 @@
-package com.vitorgsevero.io.votingsessionapi.model;
+package com.vitorgsevero.io.votingsessionapi.auditing;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.CreatedDate;
@@ -12,7 +12,7 @@ import java.util.Date;
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = {"created_at,updated_at"}, allowGetters = true)
-public class SessionAudit {
+public class AssociateAudit {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name="created_at", nullable = false, updatable = false)

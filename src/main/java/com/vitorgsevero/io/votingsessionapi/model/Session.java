@@ -1,5 +1,6 @@
 package com.vitorgsevero.io.votingsessionapi.model;
 
+import com.vitorgsevero.io.votingsessionapi.auditing.SessionAudit;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -19,7 +20,7 @@ public class Session extends SessionAudit {
 
     private String sessionName;
 
-    private int sessionTime;
+    private int sessionTime = 1;
 
     private boolean sessionStatus;
 

@@ -12,7 +12,7 @@ import java.util.Date;
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = {"created_at,updated_at"}, allowGetters = true)
-public class ScheduleAudit {
+public class SessionAudit {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name="created_at", nullable = false, updatable = false)

@@ -11,12 +11,16 @@ import javax.persistence.Id;
 @Data
 @AllArgsConstructor
 @Entity
-public class Schedule extends ScheduleAudit {
+public class Session extends SessionAudit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    private String name;
+    private String sessionName;
+
+    private int sessionTime;
+
+    private boolean sessionStatus;
 
 }

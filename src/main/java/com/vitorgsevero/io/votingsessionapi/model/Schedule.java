@@ -1,13 +1,11 @@
 package com.vitorgsevero.io.votingsessionapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.vitorgsevero.io.votingsessionapi.auditing.ScheduleAudit;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
@@ -19,5 +17,10 @@ public class Schedule extends ScheduleAudit {
     private int id;
 
     private String name;
+
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="id", nullable = false)
+    @JsonIgnore
+    private Session session;
 
 }

@@ -2,7 +2,6 @@ package com.vitorgsevero.io.votingsessionapi.controller;
 
 import com.vitorgsevero.io.votingsessionapi.exception.ResourceNotFoundException;
 import com.vitorgsevero.io.votingsessionapi.model.Associate;
-import com.vitorgsevero.io.votingsessionapi.model.Schedule;
 import com.vitorgsevero.io.votingsessionapi.repository.AssociateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

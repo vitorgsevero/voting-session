@@ -1,12 +1,10 @@
 package com.vitorgsevero.io.votingsessionapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
@@ -16,5 +14,9 @@ public class Vote {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Associate associate;
 
 }

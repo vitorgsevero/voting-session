@@ -1,13 +1,11 @@
 package com.vitorgsevero.io.votingsessionapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.vitorgsevero.io.votingsessionapi.auditing.AssociateAudit;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
@@ -19,5 +17,10 @@ public class Associate extends AssociateAudit {
     private Long id;
 
     private int scheduleCounter;
+
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "associate")
+    @JoinColumn(name="id", nullable = false)
+    @JsonIgnore
+    private Session session;
 
 }

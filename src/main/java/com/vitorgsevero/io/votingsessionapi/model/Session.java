@@ -26,4 +26,10 @@ public class Session extends SessionAudit {
     @JsonIgnore
     private Schedule schedule;
 
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="id", nullable = false)
+    @JsonIgnore
+    private Associate associate;
+
+
 }

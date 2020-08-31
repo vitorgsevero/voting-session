@@ -1,7 +1,6 @@
 package com.vitorgsevero.io.votingsessionapi.controller;
 
 import com.vitorgsevero.io.votingsessionapi.exception.ResourceNotFoundException;
-import com.vitorgsevero.io.votingsessionapi.model.Associate;
 import com.vitorgsevero.io.votingsessionapi.model.Schedule;
 import com.vitorgsevero.io.votingsessionapi.repository.ScheduleRepository;
 import io.swagger.annotations.Api;
